@@ -1,0 +1,25 @@
+{
+    "name": "nicolaslefevre/fizzbuzz",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^10.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "NicolasLefevre\\FizzBuzz\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NicolasLefevre\\FizzBuzz\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nicolas LEFEVRE",
+            "email": "weblefevre@gmail.com"
+        }
+    ],
+    "require": {}
+}
