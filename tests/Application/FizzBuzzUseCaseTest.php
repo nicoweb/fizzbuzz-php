@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NicolasLefevre\Application;
+namespace NicolasLefevre\FizzBuzz\Tests\Application;
 
 use NicolasLefevre\FizzBuzz\Application\FizzBuzzQuery;
 use NicolasLefevre\FizzBuzz\Application\FizzBuzzQueryHandler;
