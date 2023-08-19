@@ -8,7 +8,7 @@ use NicolasLefevre\FizzBuzz\Application\FizzBuzzQuery;
 use NicolasLefevre\FizzBuzz\Application\FizzBuzzQueryHandler;
 use NicolasLefevre\FizzBuzz\Domain\Error\FromMustBeLessThanToError;
 use NicolasLefevre\FizzBuzz\Domain\Error\NumberMustBePositiveError;
-use NicolasLefevre\FizzBuzz\Domain\FizzBuzzMapper;
+use NicolasLefevre\FizzBuzz\Domain\FizzBuzzGenerator;
 use PHPUnit\Framework\TestCase;
 
 final class FizzBuzzUseCaseTest extends TestCase
@@ -17,7 +17,7 @@ final class FizzBuzzUseCaseTest extends TestCase
 
     public function setUp(): void
     {
-       $this->handler = new FizzBuzzQueryHandler(new FizzBuzzMapper());
+       $this->handler = new FizzBuzzQueryHandler(new FizzBuzzGenerator());
     }
 
     /** @test */

@@ -7,7 +7,7 @@ namespace NicolasLefevre\FizzBuzz\Domain;
 use NicolasLefevre\FizzBuzz\Domain\ValueObject\FizzBuzzSequence;
 use NicolasLefevre\FizzBuzz\Domain\ValueObject\Range;
 
-final class FizzBuzzMapper
+final class FizzBuzzGenerator
 {
     private const FIZZ = 'Fizz';
     private const BUZZ = 'Buzz';
@@ -16,7 +16,7 @@ final class FizzBuzzMapper
     private const BUZZ_FACTOR = 5;
     private const FIZZ_BUZZ_FACTOR = 15;
 
-    public function map(Range $range): FizzBuzzSequence
+    public function generate(Range $range): FizzBuzzSequence
     {
         return $this->generateForRange($range);
     }

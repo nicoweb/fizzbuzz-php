@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace NicolasLefevre\FizzBuzz\Tests\NicolasLefevre\Presentation;
 
 use NicolasLefevre\FizzBuzz\Application\FizzBuzzQueryHandler;
-use NicolasLefevre\FizzBuzz\Domain\FizzBuzzMapper;
+use NicolasLefevre\FizzBuzz\Domain\FizzBuzzGenerator;
 use NicolasLefevre\FizzBuzz\Presentation\FizzBuzzAction;
 use NicolasLefevre\FizzBuzz\Presentation\Responder\FizzBuzzConsoleResponder;
 use PHPUnit\Framework\TestCase;
@@ -16,7 +16,7 @@ final class FizzBuzzActionIntTest extends TestCase
 
     public function setUp(): void
     {
-        $handler = new FizzBuzzQueryHandler(new FizzBuzzMapper());
+        $handler = new FizzBuzzQueryHandler(new FizzBuzzGenerator());
         $this->action = new FizzBuzzAction($handler, new FizzBuzzConsoleResponder());
     }
 
