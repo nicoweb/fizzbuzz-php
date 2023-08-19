@@ -6,7 +6,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/vendor/autoload.php';
 
 if ($argc < 1) {
-    echo "Please provide an argument (test or console).\n";
+    echo "Please either provide the 'test' argument or no argument at all.\n";
     exit(1);
 }
 
@@ -22,5 +22,5 @@ if ($argument === 'test') {
     exit($returnVar);
 }
 
-echo "Unrecognized argument.\nPlease use 'test' or no argument to lauch FizzBuzz in console'.\n";
+echo "Unrecognized argument. Please use either 'test' or provide no argument to launch FizzBuzz in the console.\n";
 exit(1);
