@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace NicolasLefevre\FizzBuzz\Domain;
 
-use NicolasLefevre\FizzBuzz\Application\FizzBuzzQueryResult;
+use NicolasLefevre\FizzBuzz\Domain\ValueObject\FizzBuzzSequence;
 use NicolasLefevre\FizzBuzz\Domain\ValueObject\Range;
-use SplFixedArray;
 
 final class FizzBuzzMapper
 {
@@ -17,12 +16,12 @@ final class FizzBuzzMapper
     private const BUZZ_FACTOR = 5;
     private const FIZZ_BUZZ_FACTOR = 15;
 
-    public function map(Range $range): FizzBuzzQueryResult
+    public function map(Range $range): FizzBuzzSequence
     {
         return $this->generateForRange($range);
     }
 
-    private function generateForRange(Range $range): FizzBuzzQueryResult
+    private function generateForRange(Range $range): FizzBuzzSequence
     {
         $sequence = $range->sequence();
 
@@ -30,7 +29,7 @@ final class FizzBuzzMapper
             $sequence[$i] = $this->generateForNumber($sequence[$i]);
         }
 
-        return FizzBuzzQueryResult::from($sequence);
+        return FizzBuzzSequence::from($sequence);
     }
 
     private function generateForNumber(int $number): string
