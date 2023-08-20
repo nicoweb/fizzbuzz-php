@@ -5,17 +5,12 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-if ($argc < 1) {
-    echo "Please either provide the 'test' argument or no argument at all.\n";
-    exit(1);
-}
-
-$argument = $argv[1] ?? null;
-
-if ($argument === null) {
+if ($argc === 1) {
     passthru('php bin/console', $returnVar);
     exit($returnVar);
 }
+
+$argument = $argv[1] ?? null;
 
 if ($argument === 'test') {
     passthru('php bin/phpunit --colors=always', $returnVar);
