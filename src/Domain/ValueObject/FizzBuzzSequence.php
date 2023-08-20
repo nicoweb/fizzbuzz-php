@@ -6,7 +6,7 @@ namespace NicolasLefevre\FizzBuzz\Domain\ValueObject;
 
 use SplFixedArray;
 
-final class FizzBuzzSequence
+final readonly class FizzBuzzSequence
 {
     private function __construct(
         public SplFixedArray $value
@@ -15,13 +15,5 @@ final class FizzBuzzSequence
 
     public static function from(SplFixedArray $sequence): self {
         return new self($sequence);
-    }
-
-    /**
-     * @return array<string>
-     */
-    public function toArray(): array
-    {
-        return $this->value->toArray();
     }
 }

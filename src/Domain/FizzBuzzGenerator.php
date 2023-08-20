@@ -7,7 +7,7 @@ namespace NicolasLefevre\FizzBuzz\Domain;
 use NicolasLefevre\FizzBuzz\Domain\ValueObject\FizzBuzzSequence;
 use NicolasLefevre\FizzBuzz\Domain\ValueObject\Range;
 
-final class FizzBuzzGenerator
+final readonly class FizzBuzzGenerator
 {
     private const FIZZ = 'Fizz';
     private const BUZZ = 'Buzz';

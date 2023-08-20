@@ -14,7 +14,7 @@ final readonly class FizzBuzzQueryHandler
     ) {
     }
 
-    public function __invoke(FizzBuzzQuery $query): FizzBuzzQueryResult
+    public function handle(FizzBuzzQuery $query): FizzBuzzQueryResult
     {
         $fizzBuzzSequence = $this->fizzBuzzGenerator->generate(
             new Range($query->from, $query->to)

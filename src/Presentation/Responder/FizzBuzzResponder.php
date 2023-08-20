@@ -9,5 +9,5 @@ use NicolasLefevre\FizzBuzz\Presentation\FizzBuzzResponse;
 
 interface FizzBuzzResponder
 {
-    public function __invoke(FizzBuzzQueryResult $fizzBuzzResult): FizzBuzzResponse;
+    public function respond(FizzBuzzQueryResult $fizzBuzzResult): FizzBuzzResponse;
 }

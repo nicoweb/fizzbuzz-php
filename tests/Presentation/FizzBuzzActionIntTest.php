@@ -24,7 +24,10 @@ final class FizzBuzzActionIntTest extends TestCase
     public function itShouldReturnGoodFormattedResultWithRange1to100(): void
     {
         ob_start();
-        ($this->action)(1, 100)->sendContent();
+        $this->action
+            ->execute(1, 100)
+            ->sendContent()
+        ;
         $output = ob_get_contents();
         ob_end_clean();
 

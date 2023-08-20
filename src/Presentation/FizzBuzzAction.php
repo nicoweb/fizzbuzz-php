@@ -16,10 +16,10 @@ final readonly class FizzBuzzAction
     ) {
     }
 
-    public function __invoke(int $from, ?int $to): FizzBuzzResponse
+    public function execute(int $from, ?int $to): FizzBuzzResponse
     {
-        $fizzBuzzResult = ($this->fizzBuzzQueryHandler)(new FizzBuzzQuery($from, $to));
+        $fizzBuzzResult = $this->fizzBuzzQueryHandler->handle(new FizzBuzzQuery($from, $to));
 
-        return ($this->responder)($fizzBuzzResult);
+        return $this->responder->respond($fizzBuzzResult);
     }
 }

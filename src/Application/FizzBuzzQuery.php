@@ -7,7 +7,7 @@ namespace NicolasLefevre\FizzBuzz\Application;
 use NicolasLefevre\FizzBuzz\Domain\ValueObject\From;
 use NicolasLefevre\FizzBuzz\Domain\ValueObject\To;
 
-final class FizzBuzzQuery
+final readonly class FizzBuzzQuery
 {
     public From $from;
     public ?To $to;

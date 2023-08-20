@@ -16,4 +16,4 @@ $action = new FizzBuzzAction(
     new FizzBuzzConsoleResponder()
 );
 
-($action)(1, 100)->sendContent();
+$action->execute(1, 100)->sendContent();

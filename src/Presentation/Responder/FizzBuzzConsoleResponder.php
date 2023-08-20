@@ -11,7 +11,7 @@ final readonly class FizzBuzzConsoleResponder implements FizzBuzzResponder
 {
     private const SEPARATOR = "\n";
 
-    public function __invoke(FizzBuzzQueryResult $fizzBuzzResult): FizzBuzzResponse
+    public function respond(FizzBuzzQueryResult $fizzBuzzResult): FizzBuzzResponse
     {
         return new FizzBuzzResponse(
             implode(self::SEPARATOR, $fizzBuzzResult->toArray()).self::SEPARATOR,
