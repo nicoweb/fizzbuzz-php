@@ -18,7 +18,7 @@ if ($argument === null) {
 }
 
 if ($argument === 'test') {
-    passthru('php bin/phpunit', $returnVar);
+    passthru('php bin/phpunit --colors=always', $returnVar);
     exit($returnVar);
 }
 

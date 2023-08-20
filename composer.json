@@ -1,10 +1,9 @@
 {
     "name": "nicolaslefevre/fizzbuzz",
     "type": "project",
-    "require-dev": {
-        "phpunit/phpunit": "^10.3"
-    },
     "license": "MIT",
+    "description": "An implementation of the FizzBuzz problem.",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "NicolasLefevre\\FizzBuzz\\": "src/"
@@ -21,5 +20,14 @@
             "email": "weblefevre@gmail.com"
         }
     ],
-    "require": {}
+    "support": {
+        "email": "weblefevre@gmail.com",
+        "source": "https://github.com/nicolaslefevre/fizzbuzz"
+    },
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.3"
+    }
 }
